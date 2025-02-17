@@ -59,10 +59,12 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   page: {
+    height: "100%",
     justifyContent: "flex-end",
     padding: 24,
   },
   backgroundImage: {
+    height: height,
     position: "absolute",
     top: 0,
     left: 0,

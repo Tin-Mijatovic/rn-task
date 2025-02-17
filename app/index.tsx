@@ -2,14 +2,20 @@ import PageSlider from "@/components/PageSlider";
 import AnimatedSwitch from "@/components/ui/AnimatedSwitch";
 import { UserBanner } from "@/components/UserBanner";
 import React from "react";
-import { View, SafeAreaView, Text, StyleSheet } from "react-native";
+import {
+  View,
+  SafeAreaView,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+} from "react-native";
 
 const HomeScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <View>
+      <TouchableOpacity style={styles.menuWrapper}>
         <Text style={styles.title}>...</Text>
-      </View>
+      </TouchableOpacity>
       <View style={styles.userBannerWrapper}>
         <UserBanner name="Georgia" status="Let’s start designing" />
       </View>
@@ -29,6 +35,10 @@ const styles = StyleSheet.create({
     width: "100%",
     justifyContent: "flex-start",
     backgroundColor: "#F5FCFF",
+  },
+  menuWrapper: {
+    alignSelf: "flex-end",
+    padding: 10,
   },
   title: {
     fontSize: 20,
