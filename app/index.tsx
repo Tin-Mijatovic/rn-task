@@ -1,10 +1,19 @@
+import { UserBanner } from "@/components/UserBanner";
 import React from "react";
 import { View, SafeAreaView, Text, StyleSheet } from "react-native";
 
 const HomeScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.title}>Home Screen</Text>
+      <View>
+        <Text style={styles.title}>...</Text>
+      </View>
+      <View>
+        <UserBanner name="Georgia" status="Let’s start designing" />
+      </View>
+      <View>
+        <Text style={styles.title}>Picture slide</Text>
+      </View>
     </SafeAreaView>
   );
 };
@@ -12,14 +21,11 @@ const HomeScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // Avoid the status bar
     justifyContent: "flex-start",
-    alignItems: "center",
     backgroundColor: "#F5FCFF",
   },
   title: {
     fontSize: 20,
-    textAlign: "center",
     margin: 10,
   },
 });
