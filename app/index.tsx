@@ -1,3 +1,5 @@
+import PageSlider from "@/components/PageSlider";
+import AnimatedSwitch from "@/components/ui/AnimatedSwitch";
 import { UserBanner } from "@/components/UserBanner";
 import React from "react";
 import { View, SafeAreaView, Text, StyleSheet } from "react-native";
@@ -8,11 +10,14 @@ const HomeScreen = () => {
       <View>
         <Text style={styles.title}>...</Text>
       </View>
-      <View>
+      <View style={styles.userBannerWrapper}>
         <UserBanner name="Georgia" status="Let’s start designing" />
       </View>
-      <View>
-        <Text style={styles.title}>Picture slide</Text>
+      <View style={styles.pagerWrapper}>
+        <PageSlider />
+      </View>
+      <View style={styles.switchWrapper}>
+        <AnimatedSwitch />
       </View>
     </SafeAreaView>
   );
@@ -20,13 +25,27 @@ const HomeScreen = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    height: "100%",
+    width: "100%",
     justifyContent: "flex-start",
     backgroundColor: "#F5FCFF",
   },
   title: {
     fontSize: 20,
     margin: 10,
+  },
+  userBannerWrapper: {
+    paddingBottom: 36,
+  },
+  pagerWrapper: {
+    height: "65%",
+    width: "100%",
+  },
+  switchWrapper: {
+    position: "absolute",
+    bottom: 50,
+    left: "50%",
+    transform: [{ translateX: -66 }],
   },
 });
 
